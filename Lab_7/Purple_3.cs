@@ -17,7 +17,7 @@ namespace Lab_7 {
 
             public string Name => _name;
             public string Surname => _surname;
-            public double[] Marks => (_marks == null) ? _marks : (double[])_marks.Clone(); // shallow copy for safety
+            public double[] Marks => (_marks == null) ? _marks : (double[])_marks.Clone(); 
             public int[] Places => (_places == null) ? _places : (int[])_places.Clone();
             public int Score => (_places == null) ? 0 : _places.Sum(); 
 
@@ -42,7 +42,7 @@ namespace Lab_7 {
                 
                 for (int judge = 0; judge < 7; judge++) {
                     var sortedParticipants = participants.Where(x => x.Marks != null && x.Places != null)
-                                                         .OrderByDescending(x => x.Marks[judge]).ToArray(); // stable sort
+                                                         .OrderByDescending(x => x.Marks[judge]).ToArray(); 
 
                     for (int p = 0; p < sortedParticipants.Length; p++) 
                         sortedParticipants[p]._places[judge] = p + 1;
