@@ -146,8 +146,8 @@ namespace Lab_7
             }
 
             public Research MakeResearch() {
-                var MM = DateTime.Now.Month.ToString("00");
-                var YY = DateTime.Now.Year.ToString()[^2..];
+                var MM = DateTime.Now.ToString("MM");
+                var YY = DateTime.Now.ToString("yy");
 
                 var newResearch = new Research($"No_{ID}_{MM}/{YY}");
                 
