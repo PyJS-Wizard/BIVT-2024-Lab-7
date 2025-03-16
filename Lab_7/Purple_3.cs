@@ -101,10 +101,10 @@ namespace Lab_7 {
                 => (_moods == null) ? _moods : (double[])_moods.Clone();
 
             public Skating(double[] moods) {
-                if (moods == null) return;
-
-                _moods = new double[moods.Length];
-                Array.Copy(moods, _moods, moods.Length);
+                _moods = new double[7];
+                
+                if (moods != null)
+                    Array.Copy(moods, _moods, moods.Length);
 
                 ModificateMood();
                 
